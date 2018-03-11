@@ -3,14 +3,17 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 /* set root font size, 10/16=0.625, defines rem */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* ===============================================
                 Header title animationg
@@ -18,30 +21,41 @@ body {
 @keyframes moveToLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-10rem);
+  }
   80% {
-    transform: translateX(1rem); }
+    transform: translateX(1rem);
+  }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveToRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
   80% {
-    transform: translateX(-1rem); }
+    transform: translateX(-1rem);
+  }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveToUp {
   0% {
     opacity: 0;
-    transform: translateY(3rem); }
+    transform: translateY(3rem);
+  }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -49,7 +63,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 3rem; }
+  padding: 3rem;
+}
 
 /* ===============================================
                 Header-heading
@@ -60,19 +75,24 @@ body {
   /* The backface-visibility CSS property determines whether
     the back face of an element is visible when turned towards the user. */
   backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation: moveToLeft 1s ease-in-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.74rem;
-    animation: moveToRight 1s ease-in-out; }
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation: moveToLeft 1s ease-in-out;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.74rem;
+  animation: moveToRight 1s ease-in-out;
+}
 
 /* ===============================================
                 Button (General)
@@ -84,24 +104,32 @@ body {
   text-decoration: none;
   border-radius: 10rem;
   transition: all .2s;
-  position: relative; }
+  position: relative;
+}
 
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
 
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:hover::after {
-    transform: scaleX(1.2) scaleY(1.4);
-    opacity: 0; }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover::after {
+  transform: scaleX(1.2) scaleY(1.4);
+  opacity: 0;
+}
 
 .btn--white {
   background: #fff;
-  color: #777; }
-  .btn--white::after {
-    background: #fff; }
+  color: #777;
+}
+
+.btn--white::after {
+  background: #fff;
+}
 
 .btn::after {
   content: "";
@@ -113,12 +141,14 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s ease-out .1s; }
+  transition: all .4s ease-out .1s;
+}
 
 .btn--animated {
   animation: moveToUp .5s ease-out .75s;
   animation-fill-mode: backwards;
-  /* use fill-mode: backwards to automatically apply the style 0% before animation starts */ }
+  /* use fill-mode: backwards to automatically apply the style 0% before animation starts */
+}
 
 /* ===============================================
                 Header
@@ -131,18 +161,25 @@ body {
   background-position: top;
   background-attachment: fixed;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__content-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+  position: relative;
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__content-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 /* end */
