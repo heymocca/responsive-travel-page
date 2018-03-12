@@ -6,6 +6,8 @@
     &:link,
     &:visited {
         text-transform: uppercase;
+        letter-spacing: .1rem;
+        word-spacing: .2rem;
         padding: 1.5rem 4rem;
         display: inline-block;
         text-decoration: none;
@@ -52,8 +54,43 @@
     }
 
     &--animated {
-        animation: moveToUp .5s ease-out .75s;
+        animation: moveToUp .8s ease-out .75s;
         animation-fill-mode: backwards;
         /* use fill-mode: backwards to automatically apply the style 0% before animation starts */
     }
 }
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-gray-dark, .2);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 1rem 2rem rgba($color-gray-dark, .2);
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+// end
