@@ -5,11 +5,32 @@
     padding: 0;
     box-sizing: inherit;
 }
-/* set root font size, 10/16=0.625, defines rem */
+/* set root font size,1rem=10px,10/16=0.625, defines rem */
 html {
     font-size: 62.5%;
+
+    // @include responsive-phone {
+    //     font-size: 50%;
+    // }
+
+    @include responsive(tab-land) {  // width < 900
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%;
+    }
+
+    @include responsive(tab-port) {  // width < 600
+        font-size: 50%; // 1rem = 8px, 8/16 = 50%;
+    }
+
+    @include responsive(l-desktop) {
+        font-size: 75%; // 1rem = 12px, 12/16 = 75%;
+    }
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include responsive(tab-port) {  // width < 600
+        padding: 0;
+    }
 }
